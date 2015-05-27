@@ -39,9 +39,11 @@ header,
 hgroup,
 main,
 nav,
+div,
 section,
 summary {
   display: block;
+  box-sizing: border-box;
 }
 
 /**

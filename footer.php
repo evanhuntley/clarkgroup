@@ -1,7 +1,12 @@
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <footer role="contentinfo">
-	<p>&copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
+	<div class="copyright">
+		<p>&copy;<?php echo date("Y"); ?> Clark Group | Office: 910-392-5555 | 4918 Wrightsville Ave, Wilmington, NC 28403-5287</p>
+	</div>
+	<div class="contact">
+		<a href="#">Contact Us Today</a>
+	</div>
 </footer>
 
 <?php wp_footer(); ?>

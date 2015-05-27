@@ -1,0 +1,107 @@
+/* =======================================================================
+Home Page Styles
+=========================================================================== */
+
+.main {
+    text-align: center;
+    background: url('../img/bg_hero-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include bp-m {
+        padding: 11em 12% 5em;
+    }
+
+    h1 {
+        position: relative;
+
+        @include bp-m {
+            @include font-size(3.75, 3.75);
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            margin-left: -20px;
+            bottom: -20px;
+            display: block;
+            width: 40px;
+            height: 4px;
+            background: $accent;
+        }
+    }
+}
+
+/* About Block --------------------------------------------------------- */
+
+.about {
+    @extend %clearfix;
+
+    h2 {
+
+        @include bp-m {
+            @include font-size(3.25, 3.75);
+        }
+    }
+
+    .about-feature {
+        padding: 8em 5em;
+        background: gray;
+
+        @include bp-l {
+            float: right;
+            width: 50%;
+            height: 700px;
+        }
+    }
+
+    .about-small {
+        padding: 3em 5em;
+        background: #ccc;
+
+        @include bp-l {
+            float: left;
+            clear: left;
+            width: 50%;
+            height: 350px;
+        }
+
+        &:nth-child(even) {
+            background: darken(#ccc, 20%);
+        }
+
+        .button {
+            float: right;
+        }
+    }
+}
+
+/* Feature Blocks ------------------------------------------------------ */
+
+.feature-block {
+    padding: 8em 4em;
+    background: url('../img/bg_geo-environmental.jpg');
+    background-size: cover;
+
+    h1 {
+        @include font-size(3.25, 3.75);
+    }
+
+    .links {
+        margin: 1em 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

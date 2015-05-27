@@ -1,0 +1,39 @@
+/* =======================================================================
+    Footer
+=========================================================================== */
+
+footer {
+    @extend %clearfix;
+    background: url('../img/bg_footer.jpg');
+
+    .copyright {
+        padding: 3em 4em;
+
+        @include bp-l {
+            width: 66%;
+            float: left;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .contact {
+        padding: 3em 4em;
+        background: rgba(0, 0, 0, .3);
+
+        @include bp-l {
+            width: 33%;
+            float: right;
+        }
+
+        a {
+            @include font-size(1.5, 1.5);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+    }
+}

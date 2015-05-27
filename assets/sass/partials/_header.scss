@@ -1,0 +1,19 @@
+/* =======================================================================
+    Header
+=========================================================================== */
+
+header {
+    position: absolute;
+    top: 1em;
+    padding: 0 2em;
+
+    .logo {
+        display: block;
+        width: 301px;
+        height: 61px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background: url('../img/l_clark-group.png');
+    }
+}

@@ -85,3 +85,14 @@ textarea {
     vertical-align: top;
     resize: vertical;
     }
+
+.button {
+    display: inline-block;
+    margin: 2em 0;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
