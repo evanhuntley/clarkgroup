@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Barebones WordPress Developer Base Theme - Sass Edition
 
 Thank you for choosing to use Barebones, a completely stripped down "starter theme" for WordPress designers and developers.
@@ -34,3 +35,7 @@ Thanks
 
 James.
 @welcomebrand
+=======
+# clarkgroup
+Clark Group
+>>>>>>> 6fe0d68bdf5341c34a22b25eaaf52cc82a134538
