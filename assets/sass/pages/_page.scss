@@ -42,6 +42,8 @@ Inner Page
 .main-content {
     @extend %clearfix;
     padding: 4em;
+    background: url('../img/bg_body.png');
+    background-attachment: fixed;
 
     h1, h2, h3, h4, h5, h6 {
         margin-top: 0;

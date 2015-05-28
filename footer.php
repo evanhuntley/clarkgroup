@@ -1,11 +1,11 @@
 <?php //get_sidebar(); ?>
 
 <footer role="contentinfo">
-	<div class="copyright">
-		<p>&copy;<?php echo date("Y"); ?> Clark Group | Office: 910-392-5555 | 4918 Wrightsville Ave, Wilmington, NC 28403-5287</p>
-	</div>
 	<div class="contact">
 		<a href="#">Contact Us Today</a>
+	</div>
+	<div class="copyright">
+		<p>&copy;<?php echo date("Y"); ?> Clark Group | Office: 910-392-5555 | 4918 Wrightsville Ave, Wilmington, NC 28403-5287</p>
 	</div>
 </footer>
 

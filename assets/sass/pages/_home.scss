@@ -3,7 +3,7 @@ Home Page Styles
 =========================================================================== */
 
 .main {
-    background: url('../img/bg_hero-2.jpg');
+    background-image: url('../img/bg_hero-2.jpg');
 }
 
 /* About Block --------------------------------------------------------- */
@@ -21,6 +21,8 @@ Home Page Styles
     .about-feature {
         padding: 8em 5em;
         background: url('../img/bg_mission.jpg');
+        background-size: cover;
+        background-attachment: fixed;
 
         @include bp-l {
             float: right;
@@ -31,7 +33,9 @@ Home Page Styles
 
     .about-small {
         padding: 3em 5em;
-        background: #ccc;
+        background: url('../img/bg_projects.jpg');
+        background-size: cover;
+        background-attachment: fixed;
 
         @include bp-l {
             float: left;
@@ -40,9 +44,7 @@ Home Page Styles
             height: 350px;
         }
 
-        &:nth-child(even) {
-            background: darken(#ccc, 20%);
-        }
+
 
         .button {
             float: right;
@@ -62,16 +64,31 @@ Home Page Styles
     }
 
     .links {
-        margin: 1em 0;
+        margin: 2em 0 0;
         padding: 0;
         list-style-type: none;
 
         li {
             display: inline-block;
+            padding: 0 1em;
+            border-left: 1px solid #fff;
+
+            &:first-child {
+                padding-left: 0;
+                border: none;
+            }
 
             a {
                 text-decoration: none;
                 text-transform: uppercase;
+                color: #fff;
+                @include font-size(1.125);
+                letter-spacing: 1px;
+
+                &:hover {
+                    color: #07aaff;
+                    text-decoration: underline;
+                }
             }
         }
     }

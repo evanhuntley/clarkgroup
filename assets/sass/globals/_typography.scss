@@ -52,7 +52,10 @@ h3, .subhead {
 
 .subhead {
     text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
     color: #fff;
+    @include font-size(1.25);
 }
 
 p {
