@@ -44,10 +44,20 @@ Inner Page
     padding: 4em;
 
     h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
         color: $text;
         text-transform: none;
         font-weight: 400;
     }
+
+    h1 {
+        @include font-size(2.5);
+    }
+
+    h2 {
+        @include font-size(2);
+    }
+
 
     p {
         color: $text;
@@ -59,6 +69,12 @@ Inner Page
     @include bp-l {
         float: right;
         width: 65%;
+    }
+
+    h3 {
+        &::after {
+            content: none;
+        }
     }
 }
 

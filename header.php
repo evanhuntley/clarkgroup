@@ -44,7 +44,7 @@
 <body <?php body_class(); ?> id="top">
 		<header>
 		    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a></h1>
-		    <button class="nav-toggle">Menu</button>
+		    <button class="nav-toggle">Navigation</button>
 				<nav role="navigation" style="display: none;">
 						<?php
 								$args = array(

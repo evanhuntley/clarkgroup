@@ -5,9 +5,11 @@
 header {
     position: absolute;
     top: 1em;
+    width: 100%;
     padding: 0 2em;
 
     .logo {
+        float: left;
         display: block;
         width: 301px;
         height: 61px;
@@ -15,5 +17,16 @@ header {
         white-space: nowrap;
         overflow: hidden;
         background: url('../img/l_clark-group.png');
+    }
+
+    .nav-toggle {
+        float: right;
+        padding-right: 3em;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: none;
+        background: url('../img/i_menu.png') no-repeat;
+        background-position: right center;
     }
 }
