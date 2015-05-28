@@ -1,3 +1,71 @@
-// This is where you can put any styles specific to a page
-// .page is the class WordPress outputs to the body tag
-.page {}
+/* =======================================================================
+Inner Page
+=========================================================================== */
+
+/* Page Header -------------------------------------------------- */
+
+.page-header {
+    background: url('../img/bg_inner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+
+    @include bp-m {
+        padding: 10em 12% 5em;
+    }
+
+    h1 {
+        position: relative;
+
+        @include bp-m {
+            @include font-size(3.75, 3.75);
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            margin-left: -20px;
+            bottom: -20px;
+            display: block;
+            width: 40px;
+            height: 4px;
+            background: $accent;
+        }
+    }
+}
+
+/* Body Styles -------------------------------------------------- */
+
+.main-content {
+    @extend %clearfix;
+    padding: 4em;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $text;
+        text-transform: none;
+        font-weight: 400;
+    }
+
+    p {
+        color: $text;
+    }
+}
+
+.primary-content {
+
+    @include bp-l {
+        float: right;
+        width: 65%;
+    }
+}
+
+.secondary-content {
+
+    @include bp-l {
+        float: left;
+        width: 30%;
+    }
+}

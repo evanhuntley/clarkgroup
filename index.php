@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="main flexslider">
+<section class="main page-header">
     <h1>Systems for a Better World</h1>
     <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamet nibh vulputbh vel velit ar aliquet. Aenean sollicitudin, lorem quis bibendum aipsum, necem nibh id elluis sed odio sit amet nibhulputate cursus i am nec cem nibh id elltellus a om auctorlit consequat dio tincid</p>
     <a class="button" href="#">See How We Can Help</a>
