@@ -7,6 +7,11 @@ header {
     top: 1em;
     width: 100%;
     padding: 0 2em;
+    transition: background .4s;
+
+    &:hover {
+        background: rgba(0, 0, 0, .4);
+    }
 
     .logo {
         float: left;

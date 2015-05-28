@@ -21,8 +21,6 @@ Home Page Styles
     .about-feature {
         padding: 8em 5em;
         background: url('../img/bg_mission.jpg');
-        background-size: cover;
-        background-attachment: fixed;
 
         @include bp-l {
             float: right;
@@ -35,7 +33,6 @@ Home Page Styles
         padding: 3em 5em;
         background: url('../img/bg_projects.jpg');
         background-size: cover;
-        background-attachment: fixed;
 
         @include bp-l {
             float: left;
@@ -44,7 +41,9 @@ Home Page Styles
             height: 350px;
         }
 
-
+        &:nth-child(even) {
+            background-image: url('../img/bg_site-control.jpg');
+        }
 
         .button {
             float: right;
