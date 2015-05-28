@@ -11,7 +11,7 @@ Inner Page
     text-align: center;
 
     @include bp-m {
-        padding: 10em 12% 5em;
+        padding: 10em 12% 8em;
     }
 
     h1 {
@@ -33,6 +33,22 @@ Inner Page
             width: 40px;
             height: 4px;
             background: $accent;
+        }
+    }
+
+    p {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 24px;
+            background: url('../img/i_arrow-down.png') no-repeat;
+            position: absolute;
+            bottom: -5em;
+            left: 50%;
+            margin-left: -22px;
         }
     }
 }

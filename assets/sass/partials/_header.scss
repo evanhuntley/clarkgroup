@@ -4,9 +4,9 @@
 
 header {
     position: absolute;
-    top: 1em;
+    top: 0;
     width: 100%;
-    padding: 0 2em;
+    padding: 1em 2em;
     transition: background .4s;
 
     &:hover {
@@ -33,5 +33,27 @@ header {
         border: none;
         background: url('../img/i_menu.png') no-repeat;
         background-position: right center;
+    }
+}
+
+/* Navigation ------------------------------------------------- */
+
+nav[role="navigation"] {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+
+    @include bp-l {
+        width: 40%;
+    }
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
     }
 }

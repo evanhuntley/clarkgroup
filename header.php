@@ -45,7 +45,7 @@
 		<header>
 		    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a></h1>
 		    <button class="nav-toggle">Navigation</button>
-				<nav role="navigation" style="display: none;">
+				<nav role="navigation">
 						<?php
 								$args = array(
 										'container' => 'false',
@@ -53,5 +53,6 @@
 										);
 								wp_nav_menu($args);
 						?>
+						<button class="close-nav">Close</button>
 				</nav>
 		</header>

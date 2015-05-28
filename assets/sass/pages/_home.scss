@@ -4,6 +4,12 @@ Home Page Styles
 
 .main {
     background-image: url('../img/bg_hero-2.jpg');
+
+    p {
+        &::after {
+            bottom: -12em;
+        }
+    }
 }
 
 /* About Block --------------------------------------------------------- */

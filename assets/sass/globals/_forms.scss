@@ -80,13 +80,19 @@ input::-moz-focus-inner {
     padding: 0;
     }
 
+input[type="text"], input[type="email"] {
+    padding: .5em;
+    border: 1px solid #ececec;
+}
+
 textarea {
     overflow: auto;
     vertical-align: top;
     resize: vertical;
-    }
+    border-color: #ececec;
+}
 
-.button {
+.button, .main-content button, .main-content input[type="submit"] {
     display: inline-block;
     margin: 2em 0;
     padding: 1em;
@@ -99,5 +105,15 @@ textarea {
     &:hover {
         border-color: #07aaff;
         background: #07aaff;
+        color: #fff;
+    }
+}
+
+.main-content {
+
+    button, input[type="submit"] {
+        background: transparent;
+        color: #787570;
+        border-color: #5d5a53;
     }
 }

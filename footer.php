@@ -2,7 +2,7 @@
 
 <footer role="contentinfo">
 	<div class="contact">
-		<a href="#">Contact Us Today</a>
+		<a href="/contact-us">Contact Us Today</a>
 	</div>
 	<div class="copyright">
 		<p>&copy;<?php echo date("Y"); ?> Clark Group | Office: 910-392-5555 | 4918 Wrightsville Ave, Wilmington, NC 28403-5287</p>
@@ -21,8 +21,8 @@
     <!--
     Scripts.min.js is a file for storing sitewide bits and pieces of Javascript,
     if you don't need it, simply delete it.
-    <script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/scripts.min.js"></script>
     -->
+	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/scripts.min.js"></script>
 
 <!-- Scripts -->
 

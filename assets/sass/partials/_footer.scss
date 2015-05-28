@@ -20,20 +20,40 @@ footer {
     }
 
     .contact {
-        padding: 3em 4em;
+        padding: 3em 4em 3em 2em;
         background: rgba(0, 0, 0, .3);
+        transition: background .4s;
 
         @include bp-l {
             width: 33%;
             float: right;
         }
 
+        &:hover {
+            background: rgba(0, 0, 0, .5);
+        }
+
         a {
-            @include font-size(1.5, 1.5);
+            @include font-size(1, 1);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #fff;
+
+            @include bp-xxl {
+                @include font-size(1.25, 1.25);
+            }
+
+            &::before {
+                content: "";
+                position: relative;
+                top: 6px;
+                display: inline-block;
+                width: 42px;
+                height: 26px;
+                margin-right: 1em;
+                background: url('../img/i_envelope.png');
+            }
         }
     }
 }
