@@ -62,8 +62,6 @@ Inner Page
 .main-content {
     @extend %clearfix;
     padding: 2em 1em;
-    background: url('../img/bg_body.png');
-    background-attachment: fixed;
 
     @include bp-s {
         padding: 2em;
