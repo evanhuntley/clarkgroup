@@ -4,29 +4,30 @@
 
 .service-page {
 
-    .service-list {
+    h2 {
+        position: relative;
+        line-height: 1.25em;
+        margin-bottom: 2em;
 
-        h2 {
-            position: relative;
-            line-height: 1.25em;
-            margin-bottom: 2em;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: -20px;
-                display: block;
-                width: 40px;
-                height: 4px;
-                background: $accent;
-            }
-
-            @include bp-xl {
-                float: left;
-                width: 25%;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            display: block;
+            width: 40px;
+            height: 4px;
+            background: $accent;
         }
+
+        @include bp-xl {
+            float: left;
+            width: 25%;
+        }
+    }
+
+    .service-list {
+        @extend %clearfix;
 
         h3 {
 
@@ -73,6 +74,20 @@
                     color: #03476a;
                 }
             }
+        }
+    }
+}
+
+/* Content Block -------------------------------------------------------- */
+
+.content-block {
+    @extend %clearfix;
+
+    .content {
+        
+        @include bp-xl {
+            float: right;
+            width: 70%;
         }
     }
 }
