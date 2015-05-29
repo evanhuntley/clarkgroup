@@ -7,6 +7,10 @@ app.nav = $('nav[role="navigation"]');
 
 $(document).ready(function() {
 
+    $('.flexslider').flexslider({
+
+    });
+
     $('.nav-toggle').on('click', function() {
         console.log('test');
         app.nav.addClass('open');

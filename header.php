@@ -31,6 +31,7 @@
 <!-- The little things -->
 
 <!-- Stylesheets -->
+	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/assets/vendor/flexslider/flexslider.css" />
 	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/assets/css/style.css" />
 <!-- Stylesheets -->
 

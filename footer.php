@@ -22,6 +22,7 @@
     Scripts.min.js is a file for storing sitewide bits and pieces of Javascript,
     if you don't need it, simply delete it.
     -->
+	<script src="<?php echo bloginfo('template_directory'); ?>/assets/vendor/flexslider/jquery.flexslider-min.js"></script>
 	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/scripts.min.js"></script>
 
 <!-- Scripts -->

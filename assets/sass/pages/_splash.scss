@@ -1,5 +1,5 @@
 /* =======================================================================
-    Splash Page
+Splash Page
 =========================================================================== */
 
 .service-page {
@@ -78,6 +78,97 @@
     }
 }
 
+/* Slider --------------------------------------------------------------- */
+
+.slider {
+    margin: 0 0 1em;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+
+    .slides > li {
+        position: relative;
+        background: url('../img/bg_hero-2.jpg');
+        background-size: cover;
+    }
+
+    .content {
+        margin: 2em 1em;
+
+        @include bp-m {
+            margin: 2em 12%;
+        }
+
+        @include bp-xl {
+            margin: 4em 15%;
+        }
+
+        h2 {
+            @include font-size(2, 2.5);
+
+            @include bp-l {
+                @include font-size(3.75, 3.75);
+            }
+        }
+    }
+
+    .flex-direction-nav {
+        display: none;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        @include bp-m {
+            display: block;
+        }
+
+        a {
+            text-shadow: none;
+            width: 35px;
+            height: 64px;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+            }
+        }
+
+        .flex-nav-prev a {
+            background: url('../img/i_slider-prev.png');
+        }
+
+        .flex-nav-next a {
+            background: url('../img/i_slider-next.png');
+        }
+    }
+
+    .flex-control-nav {
+        z-index: 7;
+        margin: 0 0 1.5em;
+        bottom: -60px;
+
+        @include bp-m {
+            display: none;
+        }
+    }
+}
+
+@include bp-xl {
+    .flexslider:hover .flex-direction-nav {
+
+        .flex-prev {
+            left: 55px;
+        }
+
+        .flex-next {
+            right: 55px;
+        }
+    }
+}
+
+
 /* Content Block -------------------------------------------------------- */
 
 .content-block {
@@ -147,7 +238,9 @@
         }
 
         h3 {
+            margin-top: 0;
             text-transform: none;
+            font-weight: 400;
 
             @include bp-xl {
                 @include font-size(2.5, 2.75);

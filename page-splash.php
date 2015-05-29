@@ -43,7 +43,29 @@
     </div>
 </section>
 <div class="slider flexslider">
-    Slider here
+    <ul class="slides">
+        <li>
+            <div class="content">
+                <div class="subhead">Something Here</div>
+                <h2>Large Marketing Heading Here</h2>
+                <p> Proin gravida nibh vel velit auctor aliquet. Aenean sollitudi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte cursuu. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="subhead">Something Here</div>
+                <h2>Another Great Comment</h2>
+                <p> Proin gravida nibh vel velit auctor aliquet. Aenean sollitudi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte cursuu. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <div class="subhead">Little Heading</div>
+                <h2>Clark Group is the Best</h2>
+                <p> Proin gravida nibh vel velit auctor aliquet. Aenean sollitudi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte cursuu. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            </div>
+        </li>
+    </ul>
 </div>
 <section class="main-content">
     <div class="content-block">
