@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 
+<?php
+    $page_intro = types_render_field("page_intro", array("raw" => true));
+
+?>
+
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <section class="page-header">
     <?php if ( is_front_page() ) { ?>
@@ -7,8 +12,9 @@
     <?php } else { ?>
         <h1><?php the_title(); ?></h1>
     <?php } ?>
-    <p>This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors.
-    </p>
+    <?php if ($page_intro) : ?>
+        <p><?php echo $page_intro; ?></p>
+    <?php endif; ?>
 </section>
 <section class="main-content">
     <article role="main" class="primary-content type-page" id="post-<?php the_ID(); ?>">

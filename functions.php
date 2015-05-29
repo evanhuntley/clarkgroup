@@ -4,8 +4,8 @@ add_theme_support( 'menus' );
 
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
-		'before_widget' => '<aside>',
-		'after_widget' => '</aside>',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 ));
@@ -69,7 +69,8 @@ function custom_wp_nav_menu($var) {
                 // List of useful classes to keep
                 'current_page_item',
                 'current_page_parent',
-                'current_page_ancestor'
+                'current_page_ancestor',
+				'secondary'
                 )
         ) : '';
 }

@@ -65,7 +65,10 @@ Home Page Styles
     background-size: cover;
 
     h1 {
-        @include font-size(3.25, 3.75);
+
+        @include bp-l {
+            @include font-size(3.25, 3.75);            
+        }
     }
 
     .links {

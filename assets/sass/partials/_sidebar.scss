@@ -1,0 +1,39 @@
+/* =======================================================================
+    Sidebar
+=========================================================================== */
+
+aside {
+
+    .widget {
+        margin: 0 0 2em;
+    }
+
+    h3 {
+        margin: 1.25em 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin: 0 0 1em;
+
+            &::before {
+                content: url('../img/i_arrow-right.png');
+                margin-right: 1em;
+            }
+
+            a {
+                color: #4b4943;
+                text-decoration: none;
+
+                &:hover {
+                    color: #07aaff;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

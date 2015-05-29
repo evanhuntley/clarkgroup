@@ -1,0 +1,28 @@
+/* =======================================================================
+    Splash Page
+=========================================================================== */
+
+.service-page {
+
+    .service-list {
+
+        h2 {
+
+            @include bp-l {
+                float: left;
+                width: 25%;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            
+            @include bp-l {
+                float: right;
+                width: 70%;
+            }
+        }
+    }
+}

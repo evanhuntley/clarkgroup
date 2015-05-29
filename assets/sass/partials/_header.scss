@@ -43,9 +43,11 @@ nav[role="navigation"] {
     position: absolute;
     top: 0;
     right: 0;
+    padding: 2em 3em;
     background: #333;
     visibility: hidden;
     opacity: 0;
+    z-index: 5;
     transition: all .4s;
 
     @include bp-l {
@@ -55,5 +57,32 @@ nav[role="navigation"] {
     &.open {
         opacity: 1;
         visibility: visible;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 1.5em;
+    }
+
+    .secondary {
+
+        a {
+            text-transform: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #07aaff;
+        }
     }
 }
