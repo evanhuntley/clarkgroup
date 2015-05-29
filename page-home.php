@@ -6,10 +6,17 @@
 
 <?php get_header(); ?>
 
+<?php
+    $hero_title = types_render_field("hero_title", array("raw" => true));
+    $hero_text = types_render_field("hero_text", array("raw" => true));
+    $hero_button = types_render_field("hero_button_url", array("raw" => true));
+    $hero_button_text = types_render_field("hero_button_text", array("raw" => true));
+?>
+
 <section class="main page-header">
-    <h1>Systems for a Better World</h1>
-    <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamet nibh vulputbh vel velit ar aliquet. Aenean sollicitudin, lorem quis bibendum aipsum, necem nibh id elluis sed odio sit amet nibhulputate cursus i am nec cem nibh id elltellus a om auctorlit consequat dio tincid</p>
-    <a class="button" href="#">See How We Can Help</a>
+    <h1><?php echo $hero_title; ?></h1>
+    <p><?php echo $hero_text; ?></p>
+    <a class="button" href="<?php echo $hero_button; ?>"><?php echo $hero_button_text; ?></a>
 </section>
 
 <section class="about">
