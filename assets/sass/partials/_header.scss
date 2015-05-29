@@ -6,33 +6,80 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 1em 2em;
+    padding: 1em;
     transition: background .4s;
+
+    @include bp-m {
+        padding: 1em 2em;
+    }
 
     &:hover {
         background: rgba(0, 0, 0, .4);
     }
 
+    h1 {
+        margin-top: 0;
+        @include font-size(1.375);
+    }
+
     .logo {
         float: left;
         display: block;
-        width: 301px;
-        height: 61px;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        background: url('../img/l_clark-group.png');
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        letter-spacing: 5px;
+
+        img {
+            margin-right: .5em;
+        }
+
+        span {
+            display: none;
+
+            @include bp-m {
+                display: inline-block;
+            }
+        }
     }
 
     .nav-toggle {
         float: right;
-        padding-right: 3em;
+        padding-right: 2.5em;
+        min-height: 30px;
         color: #fff;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 5px;
+        @include font-size(1.125);
         border: none;
         background: url('../img/i_menu.png') no-repeat;
         background-position: right center;
+
+        span {
+            display: none;
+
+            @include bp-l {
+                display: inline-block;
+            }
+        }
+    }
+
+    .close-nav {
+        display: block;
+        width: 28px;
+        height: 27px;
+        position: absolute;
+        top: 2em;
+        right: 1em;
+        text-indent: 150%;
+        overflow: hidden;
+        white-space: nowrap;
+        border: none;
+        background: url('../img/i_close-menu.png') no-repeat;
+
+        @include bp-m {
+            right: 2em;
+        }
     }
 }
 
@@ -43,12 +90,16 @@ nav[role="navigation"] {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2em 3em;
+    padding: 2em;
     background: #333;
     visibility: hidden;
     opacity: 0;
     z-index: 5;
     transition: all .4s;
+
+    @include bp-m {
+        padding: 2em 3em;
+    }
 
     @include bp-l {
         width: 40%;
@@ -67,12 +118,23 @@ nav[role="navigation"] {
 
     li {
         margin-bottom: 1.5em;
+        width: 80%;
+
+        @include bp-l {
+            width: 60%;
+        }
     }
 
     .secondary {
 
+        margin-top: 3em;
+
         a {
             text-transform: none;
+        }
+
+        & ~ .secondary {
+            margin-top: 1em;
         }
     }
 

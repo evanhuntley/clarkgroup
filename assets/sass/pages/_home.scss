@@ -25,10 +25,11 @@ Home Page Styles
     }
 
     .about-feature {
-        padding: 8em 5em;
+        padding: 3em 1em;
         background: url('../img/bg_mission.jpg');
 
-        @include bp-l {
+        @include bp-xl {
+            padding: 8em 5em;
             float: right;
             width: 50%;
             height: 700px;
@@ -36,15 +37,16 @@ Home Page Styles
     }
 
     .about-small {
-        padding: 3em 5em;
+        padding: 3em 1em;
         background: url('../img/bg_projects.jpg');
         background-size: cover;
 
-        @include bp-l {
+        @include bp-xl {
             float: left;
             clear: left;
             width: 50%;
             height: 350px;
+            padding: 3em 5em;
         }
 
         &:nth-child(even) {
@@ -52,7 +54,10 @@ Home Page Styles
         }
 
         .button {
-            float: right;
+
+            @include bp-xl {
+                float: right;
+            }
         }
     }
 }
@@ -60,14 +65,18 @@ Home Page Styles
 /* Feature Blocks ------------------------------------------------------ */
 
 .feature-block {
-    padding: 8em 4em;
+    padding: 3em 1em;
     background: url('../img/bg_geo-environmental.jpg');
     background-size: cover;
+
+    @include bp-xl {
+        padding: 8em 4em;
+    }
 
     h1 {
 
         @include bp-l {
-            @include font-size(3.25, 3.75);            
+            @include font-size(3.25, 3.75);
         }
     }
 
@@ -77,9 +86,14 @@ Home Page Styles
         list-style-type: none;
 
         li {
-            display: inline-block;
-            padding: 0 1em;
-            border-left: 1px solid #fff;
+            display: block;
+            padding: .25em 0;
+
+            @include bp-m {
+                display: inline-block;
+                border-left: 1px solid #fff;
+                padding: 0 1em;
+            }
 
             &:first-child {
                 padding-left: 0;
@@ -90,8 +104,11 @@ Home Page Styles
                 text-decoration: none;
                 text-transform: uppercase;
                 color: #fff;
-                @include font-size(1.125);
                 letter-spacing: 1px;
+
+                @include bp-m {
+                    @include font-size(1.125);
+                }
 
                 &:hover {
                     color: #07aaff;

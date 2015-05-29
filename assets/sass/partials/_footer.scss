@@ -7,11 +7,16 @@ footer {
     background: url('../img/bg_footer.jpg');
 
     .copyright {
-        padding: 3em 4em;
+        padding: 1em;
+        text-align: center;
+        @include font-size(.75);
 
         @include bp-l {
             width: 66%;
             float: left;
+            padding: 3em 4em;
+            text-align: left;
+            @include font-size(1);
         }
 
         p {
@@ -20,13 +25,16 @@ footer {
     }
 
     .contact {
-        padding: 3em 4em 3em 2em;
+        padding: 1em 1em 1.25em;
+        text-align: center;
         background: rgba(0, 0, 0, .3);
         transition: background .4s;
 
         @include bp-l {
             width: 33%;
             float: right;
+            padding: 3em 4em 3em 2em;
+            text-align: left;
         }
 
         &:hover {

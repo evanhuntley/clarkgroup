@@ -5,6 +5,7 @@ Inner Page
 /* Page Header -------------------------------------------------- */
 
 .page-header {
+    padding: 8em 1em;
     background: url('../img/bg_inner.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -16,8 +17,11 @@ Inner Page
 
     h1 {
         position: relative;
+        @include font-size(2, 2.5);
+        margin-bottom: 1.25em;
 
         @include bp-m {
+            margin-bottom: .75em;
             @include font-size(3.75, 3.75);
             font-weight: 900;
             letter-spacing: 3px;

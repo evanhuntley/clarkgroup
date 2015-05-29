@@ -80,6 +80,12 @@ input::-moz-focus-inner {
     padding: 0;
     }
 
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
 input[type="text"], input[type="email"] {
     padding: .5em;
     border: 1px solid #ececec;
