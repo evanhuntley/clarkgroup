@@ -5,7 +5,11 @@
 		<a href="/contact-us">Contact Us Today</a>
 	</div>
 	<div class="copyright">
-		<p>&copy;<?php echo date("Y"); ?> Clark Group | Office: 910-392-5555 | 4918 Wrightsville Ave, Wilmington, NC 28403-5287</p>
+		<ul>
+			<li>&copy;<?php echo date("Y"); ?> Clark Group</li>
+			<li>Office: 910-392-5555</li>
+			<li>4918 Wrightsville Ave, Wilmington, NC 28403-5287</li>
+		</ul>
 	</div>
 </footer>
 

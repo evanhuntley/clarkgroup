@@ -11,16 +11,31 @@ footer {
         text-align: center;
         @include font-size(.75);
 
-        @include bp-l {
+        @include bp-xl {
             width: 66%;
             float: left;
-            padding: 3em 4em;
+            padding: 3em 2em 3em 4em;
             text-align: left;
             @include font-size(1);
         }
 
-        p {
+        ul {
             margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                line-height: 1em;
+                color: #fff;
+                padding: 0 1em;
+                border-left: 1px solid #fff;
+
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0;
+                }
+            }
         }
     }
 
@@ -30,7 +45,7 @@ footer {
         background: rgba(0, 0, 0, .3);
         transition: background .4s;
 
-        @include bp-l {
+        @include bp-xl {
             width: 33%;
             float: right;
             padding: 3em 4em 3em 2em;
