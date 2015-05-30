@@ -11,6 +11,11 @@
     $hero_text = types_render_field("hero_text", array("raw" => true));
     $hero_button = types_render_field("hero_button_url", array("raw" => true));
     $hero_button_text = types_render_field("hero_button_text", array("raw" => true));
+
+    $sc_title = types_render_field("site_control_title", array("raw" => true));
+    $sc_text = types_render_field("site_control_text", array("raw" => true));
+    $sc_button_title = types_render_field("site_control_button_title", array("raw" => true));
+    $sc_button_url = types_render_field("site_control_button_url", array("raw" => true));
 ?>
 
 <section class="main page-header">
@@ -26,9 +31,9 @@
     <a class="button" href="#">Read About Our Mission</a>
   </div>
   <div class="about-small">
-    <h3>Only the Best</h3>
-    <p>Commercial Site Control velit auctor enean soltudi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte corbi accumsan ipsum velit. Nam roin.</p>
-    <a class="button" href="#">Our Partnership</a>
+    <h3><?php echo $sc_title; ?></h3>
+    <p><?php echo $sc_text; ?></p>
+    <a class="button" href="<?php echo $sc_button_url; ?>"><?php echo $sc_button_title; ?></a>
   </div>
   <div class="about-small">
     <h3>Our Projects</h3>
