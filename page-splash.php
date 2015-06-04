@@ -23,7 +23,6 @@
     $sf2_title = types_render_field("sf2_title", array("raw" => true));
     $sf2_content = types_render_field("sf2_content", array("raw" => false));
     $sf2_image = types_render_field("sf2_image", array("raw" => true));
-
 ?>
 
 <section class="page-header <?php echo $bg_img; ?>">
@@ -36,33 +35,38 @@
         <p><?php echo $page_intro; ?></p>
     <?php endif; ?>
 </section>
+<?php
+    $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => -1,
+        'post_parent'    => $post->ID,
+        'order'          => 'ASC',
+        'orderby'        => 'menu_order'
+     );
+
+     $parent = new WP_Query( $args );
+     if ( $parent->have_posts() ) :
+?>
 <section class="main-content service-page">
     <div class="service-list">
         <h2>Take a Look at Our Services</h2>
         <ul>
+            <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+
+            <?php
+                $page_intro = types_render_field("page_intro", array("raw" => true));
+            ?>
             <li>
-                <h3>Sedimentation and Erosion Control Plans</h3>
-                <p>Fermentum feugiat velit mauriyoiuben im esgestas quam totiun aliquam massa nisl quis nthoehud</p>
-                <a href="#">Learn More</a>
+                <h3><?php the_title(); ?></h3>
+                <p><?php echo wp_trim_words( $page_intro, $num_words = 20, $more = null ); ?></p>
+                <a href="<?php echo get_the_permalink(); ?>">Learn More</a>
             </li>
-            <li>
-                <h3>Sedimentation and Erosion Control Plans</h3>
-                <p>Fermentum feugiat velit mauriyoiuben im esgestas quam totiun aliquam massa nisl quis nthoehud</p>
-                <a href="#">Learn More</a>
-            </li>
-            <li>
-                <h3>Sedimentation and Erosion Control Plans</h3>
-                <p>Fermentum feugiat velit mauriyoiuben im esgestas quam totiun aliquam massa nisl quis nthoehud</p>
-                <a href="#">Learn More</a>
-            </li>
-            <li>
-                <h3>Sedimentation and Erosion Control Plans</h3>
-                <p>Fermentum feugiat velit mauriyoiuben im esgestas quam totiun aliquam massa nisl quis nthoehud</p>
-                <a href="#">Learn More</a>
-            </li>
+            <?php endwhile; ?>
         </ul>
     </div>
 </section>
+<?php endif; ?>
+
 <div class="slider flexslider">
     <ul class="slides">
         <li>
@@ -115,7 +119,7 @@
         <h3><?php echo $sf2_title; ?></h3>
         <p><?php echo $sf2_content; ?></p>
     </div>
-    <img src="<?php echo $sf2_image; ?>" />
+    <img class="flip" src="<?php echo $sf2_image; ?>" />
 </div>
 <?php endif; ?>
 
