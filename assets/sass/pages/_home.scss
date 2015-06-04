@@ -73,6 +73,30 @@ Home Page Styles
         padding: 8em 4em;
     }
 
+    &.image-1 {
+        background: url('../img/bg_geo-environmental.jpg');
+    }
+
+    &.image-2 {
+        background: url('../img/bg_excavator.jpg');
+    }
+
+    &.image-3 {
+        background: url('../img/bg_inner.jpg');
+    }
+
+    &.image-4 {
+        background: url('../img/bg_energy.jpg');
+    }
+
+    &.image-5 {
+        background: url('../img/bg_construction.jpg');
+    }
+
+    &.image-6 {
+        background: url('../img/bg_old-building.jpg');
+    }
+
     h1 {
 
         @include bp-l {

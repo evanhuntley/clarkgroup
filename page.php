@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
 <?php
     $page_intro = types_render_field("page_intro", array("raw" => true));
-
+    $bg_img = types_render_field("bg_img", array("raw" => true));
 ?>
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<section class="page-header">
+<section class="page-header <?php echo $bg_img; ?>">
     <?php if ( is_front_page() ) { ?>
         <h1><?php the_title(); ?></h1>
     <?php } else { ?>

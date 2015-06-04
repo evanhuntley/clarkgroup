@@ -15,6 +15,30 @@ Inner Page
         padding: 10em 12% 8em;
     }
 
+    &.image-1 {
+        background: url('../img/bg_geo-environmental.jpg');
+    }
+
+    &.image-2 {
+        background: url('../img/bg_excavator.jpg');
+    }
+
+    &.image-3 {
+        background: url('../img/bg_inner.jpg');
+    }
+
+    &.image-4 {
+        background: url('../img/bg_energy.jpg');
+    }
+
+    &.image-5 {
+        background: url('../img/bg_construction.jpg');
+    }
+
+    &.image-6 {
+        background: url('../img/bg_old-building.jpg');
+    }
+
     h1 {
         position: relative;
         @include font-size(2, 2.5);

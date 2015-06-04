@@ -6,14 +6,35 @@
 
 <?php get_header(); ?>
 
-<section class="page-header">
+<?php
+    $page_intro = types_render_field("page_intro", array("raw" => true));
+    $bg_img = types_render_field("bg_img", array("raw" => true));
+
+    $cb1_title = types_render_field("cb1_title", array("raw" => true));
+    $cb1_content = types_render_field("cb1_content_block", array("raw" => false));
+
+    $cb2_title = types_render_field("cb2_title", array("raw" => true));
+    $cb2_content = types_render_field("cb2_content_block", array("raw" => false));
+
+    $sf1_title = types_render_field("sf1_title", array("raw" => true));
+    $sf1_content = types_render_field("sf1_content", array("raw" => false));
+    $sf1_image = types_render_field("sf1_image", array("raw" => true));
+
+    $sf2_title = types_render_field("sf2_title", array("raw" => true));
+    $sf2_content = types_render_field("sf2_content", array("raw" => false));
+    $sf2_image = types_render_field("sf2_image", array("raw" => true));
+
+?>
+
+<section class="page-header <?php echo $bg_img; ?>">
     <?php if ( is_front_page() ) { ?>
         <h1><?php the_title(); ?></h1>
     <?php } else { ?>
         <h1><?php the_title(); ?></h1>
     <?php } ?>
-    <p>This is an example page. It’s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors.
-    </p>
+    <?php if ($page_intro) : ?>
+        <p><?php echo $page_intro; ?></p>
+    <?php endif; ?>
 </section>
 <section class="main-content service-page">
     <div class="service-list">
@@ -67,36 +88,45 @@
         </li>
     </ul>
 </div>
+<?php if ( $cb1_title && $cb1_content) : ?>
 <section class="main-content">
     <div class="content-block">
-        <h2>An Overview of Our Services</h2>
+        <h2><?php echo $cb1_title; ?></h2>
         <div class="content">
-            <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamevel velit arqsdfuet. Aeneasollicitudin, loruis bibendum aip sum, necem nibh id ed odiometate cursus i am necem nibh id elltsdf el tincidng fdum auctoron  sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus oddf dfg io tincictor a ornare od</p>
-            <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamevel velit arqsdfuet. Aeneasollicitudin, loruis bibendum aip sum, necem nibh id ed odiometate cursus i am necem nibh id elltsdf el tincidng fdum auctoron  sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus oddf dfg io tincictor a ornare od</p>
+            <?php echo $cb1_content; ?>
         </div>
     </div>
 </section>
+<?php endif; ?>
+
+<?php if ( $sf1_title && $sf1_content && $sf1_image) : ?>
 <div class="service-feature">
     <div class="content">
-        <h3>This is What a Heading Looks Like</h3>
-        <p>Duiass sed odiosdfdf kjhjt amet nibh oremumroin cem nibh id ell gravida niamvel velnean sollicitudin, lorem quis bibendum aipsum, necem nibh id elluis sed odio sit amet nibhulputate cursus i am nec cem nibh id elltellus a om aurlit co aptent taciti sociosqu ad litora torquent per conub</p>
+        <h3><?php echo $sf1_title; ?></h3>
+        <p><?php echo $sf1_content; ?></p>
     </div>
-    <img src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_mission.jpg" />
+    <img src="<?php echo $sf1_image; ?>" />
 </div>
+<?php endif; ?>
+
+<?php if ( $sf2_title && $sf2_content && $sf2_image) : ?>
 <div class="service-feature">
     <div class="content flip">
-        <h3>This is What a Heading Looks Like</h3>
-        <p>Duiass sed odiosdfdf kjhjt amet nibh oremumroin cem nibh id ell gravida niamvel velnean sollicitudin, lorem quis bibendum aipsum, necem nibh id elluis sed odio sit amet nibhulputate cursus i am nec cem nibh id elltellus a om aurlit co aptent taciti sociosqu ad litora torquent per conub</p>
+        <h3><?php echo $sf2_title; ?></h3>
+        <p><?php echo $sf2_content; ?></p>
     </div>
-    <img class="flip" src="<?php echo bloginfo('template_directory'); ?>/assets/img/bg_mission.jpg" />
+    <img src="<?php echo $sf2_image; ?>" />
 </div>
+<?php endif; ?>
+
+<?php if ( $cb2_title && $cb2_content) : ?>
 <section class="main-content">
     <div class="content-block">
-        <h2>An Overview of Our Services</h2>
+        <h2><?php echo $cb2_title; ?></h2>
         <div class="content">
-            <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamevel velit arqsdfuet. Aeneasollicitudin, loruis bibendum aip sum, necem nibh id ed odiometate cursus i am necem nibh id elltsdf el tincidng fdum auctoron  sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus oddf dfg io tincictor a ornare od</p>
-            <p>Duiass sed odiosdfdf kjgphj  sit amet nibh orem Ipsum. Proin cem nibh id ell gravida niamevel velit arqsdfuet. Aeneasollicitudin, loruis bibendum aip sum, necem nibh id ed odiometate cursus i am necem nibh id elltsdf el tincidng fdum auctoron  sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus oddf dfg io tincictor a ornare od</p>
+            <?php echo $cb2_content; ?>
         </div>
     </div>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>

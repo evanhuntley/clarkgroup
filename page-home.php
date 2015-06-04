@@ -16,6 +16,17 @@
     $sc_text = types_render_field("site_control_text", array("raw" => true));
     $sc_button_title = types_render_field("site_control_button_title", array("raw" => true));
     $sc_button_url = types_render_field("site_control_button_url", array("raw" => true));
+
+    $mission_title = types_render_field("mission_title", array("raw" => true));
+    $mission_subhead = types_render_field("mission_subhead", array("raw" => true));
+    $mission_button_title = types_render_field("mission_button_title", array("raw" => true));
+    $mission_button_url = types_render_field("mission_button_url", array("raw" => true));
+
+    $projects_title = types_render_field("projects_title", array("raw" => true));
+    $projects_text = types_render_field("projects_text", array("raw" => true));
+    $projects_button_text = types_render_field("projects_button_text", array("raw" => true));
+    $projects_button_url = types_render_field("projects_button_url", array("raw" => true));
+
 ?>
 
 <section class="main page-header">
@@ -26,9 +37,9 @@
 
 <section class="about">
   <div class="about-feature">
-    <div class="subhead">Our Mission</div>
-    <h2>Our Mission to Better the World</h2>
-    <a class="button" href="#">Read About Our Mission</a>
+    <div class="subhead"><?php echo $mission_subhead; ?></div>
+    <h2><?php echo $mission_title; ?></h2>
+    <a class="button" href="<?php echo $mission_button_url; ?>"><?php echo $mission_button_title; ?></a>
   </div>
   <div class="about-small">
     <h3><?php echo $sc_title; ?></h3>
@@ -36,20 +47,44 @@
     <a class="button" href="<?php echo $sc_button_url; ?>"><?php echo $sc_button_title; ?></a>
   </div>
   <div class="about-small">
-    <h3>Our Projects</h3>
-    <p>Proin gravida nibh vel velit auctor enean soludi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte corbi accumsan ipsum velit.</p>
-    <a class="button" href="#">View Our Projects</a>
+    <h3><?php echo $projects_title; ?></h3>
+    <p><?php echo $projects_text; ?></p>
+    <a class="button" href="<?php echo $projects_button_url; ?>"><?php echo $projects_button_text; ?></a>
   </div>
 </section>
 
-<section class="feature-block">
-  <div class="subhead">Something Here</div>
-  <h1>Geo-Environmental/Earth Science</h1>
-  <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollitudi orem quis bibendum auctor, nisi elit consequat ipsuc agitt isnibh iduis sedte cursuu. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+<?php
+    $args = array(
+        'post_type' => 'page',
+        'orderby' => 'menu_order',
+    	'tax_query' => array(
+    		array(
+    			'taxonomy' => 'page-categories',
+    			'field'    => 'slug',
+    			'terms'    => 'services',
+    		),
+    	),
+    );
+    $subpages = new WP_Query( $args);
+    while ( $subpages->have_posts() ) : $subpages->the_post();
+
+    $intro = types_render_field("page_intro", array("raw" => true));
+    $subhead = types_render_field("subhead", array("raw" => true));
+    $bg_img = types_render_field("bg_img", array("raw" => true));
+?>
+
+<section class="feature-block <?php echo $bg_img; ?>">
+  <?php if ( $subhead ) : ?>
+      <div class="subhead"><?php echo $subhead; ?></div>
+  <?php endif; ?>
+  <h1><?php the_title(); ?></h1>
+  <?php if ( $intro ) : ?>
+      <p><?php echo $intro; ?></p>
+  <?php endif; ?>
   <ul class="links">
-    <li><a href="#">Learn More</a></li>
-    <li><a href="#">View All Services</a></li>
+    <li><a href="<?php echo get_the_permalink(); ?>">Learn More</a></li>
   </ul>
 </section>
 
+<?php endwhile; wp_reset_query(); ?>
 <?php get_footer(); ?>
